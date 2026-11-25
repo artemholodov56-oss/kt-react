@@ -1,0 +1,43 @@
+/* src/App.css */
+
+/* Переменные для СВЕТЛОЙ темы (по умолчанию) */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #333333;
+  --card-bg: #f5f5f5;
+  --primary-color: #4a90e2;
+  --border-color: #dddddd;
+}
+
+/* Переменные для ТЁМНОЙ темы */
+[data-theme="dark"] {
+  --bg-color: #1a1a1a;
+  --text-color: #e0e0e0;
+  --card-bg: #2d2d2d;
+  --primary-color: #64b5f6;
+  --border-color: #444444;
+}
+
+/* Применение переменных */
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition:
+    background-color 0.3s,
+    color 0.3s; /* Плавный переход */
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Адаптивность для мобильных */
+@media (max-width: 768px) {
+  .container {
+    padding: 0 15px;
+  }
+}
